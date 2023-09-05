@@ -8,10 +8,34 @@ void main() {
   print('Who\'s birthday do you want to look up?');
   print(scientists.keys);
   String name = stdin.readLineSync()!;
+  if(name ==scientists.keys){
+    print('${name}  birthday is ${scientists[name]}');
+    print('other scientist');
+  }else{
+    print('rong name');
+  }
+  print('other scientist');
+  String na = stdin.readLineSync()!;
 
-  print('${name}  birthday is ${scientists[name]}');
+
+  do{
+    if(na =='yes'){
+      print('Who\'s birthday do you want to look up?');
+      String name = stdin.readLineSync()!;
+
+      if(name ==scientists.keys){
+        print('${name}  birthday is ${scientists[name]}');
+      }else{
+        print('rong name');
+      }
+      print('other scientist');
+      na = stdin.readLineSync()!;
+    }else{
+      print('add  scientists');
+    }
+
+  }while(na =='yes');
   print('add  scientists');
-
   String add = stdin.readLineSync()!;
   do{
 
@@ -21,13 +45,16 @@ void main() {
       print('birthday');
       String birthday = stdin.readLineSync()!;
       scientists[newName] = birthday;
-      print(scientists);print('add  scientists');
+      print(scientists);
+      print('add  scientists');
       add = stdin.readLineSync()!;
     }else{
       print('ok');
     }
 
   }while(add =='yes');
+
+
 
 
 
