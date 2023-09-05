@@ -8,12 +8,8 @@ void main() {
   print('Who\'s birthday do you want to look up?');
   print(scientists.keys);
   String name = stdin.readLineSync()!;
-  if(name ==scientists.keys){
-    print('${name}  birthday is ${scientists[name]}');
+  print('${name}  birthday is ${scientists[name]}');
     print('other scientist');
-  }else{
-    print('rong name');
-  }
   print('other scientist');
   String na = stdin.readLineSync()!;
 
