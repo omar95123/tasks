@@ -1,7 +1,6 @@
 import 'dart:io';
 
-String playerOne = 'x';
-String playerTwo = 'O';
+
 
 void main() {
   bool anyOneWins = false;
@@ -37,6 +36,8 @@ void main() {
   } while (!anyOneWins);
 }
 
+String playerOne = 'x';
+String playerTwo = 'O';
 void drawBoard(List<List<String>> board) {
   String row1 = "| ${board[0][0]} | ${board[0][1]} | ${board[0][2]} |";
   String row2 = "| ${board[1][0]} | ${board[1][1]} | ${board[1][2]} |";
