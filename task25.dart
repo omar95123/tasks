@@ -8,11 +8,10 @@ void main() {
 }
 
 String randemword(){
-  final random = Random();
   var file = File('sowpods.txt');
-  List<String> wordList = file.readAsLinesSync();
-  String word = wordList[random.nextInt(wordList.length)];
-  return word;
+  List<String> word = file.readAsLinesSync();
+  String randemWord = word[Random().nextInt(word.length)];
+  return randemWord;
 }
 
 
