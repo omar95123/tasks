@@ -29,7 +29,7 @@ void guessLetter(String randomWord) {
         if(guess.join('')==randomWord){
           print('Guess right');
         }
-      }print('rong');
+      }print('wrong');
     print(guess.join(''));
 
   }while (guess.join('') != randomWord);
