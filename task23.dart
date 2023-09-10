@@ -5,15 +5,13 @@ void main() {
   final file = File('sowpods.txt');
   file.readAsString().then((text) {
     final data = text.split("\n");
-    print(data.length);
-    print(data[Random().nextInt(data.length)]);
+    final word=data[Random().nextInt(data.length)];
+    print(word);
 
 
 
 
   });
-}
-
 
 
 
