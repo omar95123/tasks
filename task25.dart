@@ -2,16 +2,17 @@ import 'dart:io';
 import 'dart:math';
 
 void main() {
- final String word =randemword();
+  final String word =randemword();
   print(word);
- guessLetter(word);
+  guessLetter(word);
 }
 
 String randemword(){
+  final random = Random();
   var file = File('sowpods.txt');
-  List<String> word = file.readAsLinesSync();
-  String randemWord = word[Random().nextInt(word.length)];
-  return randemWord;
+  List<String> wordList = file.readAsLinesSync();
+  String word = wordList[random.nextInt(wordList.length)];
+  return word;
 }
 
 
@@ -19,18 +20,19 @@ void guessLetter(String randomWord) {
   List guess = (" " * randomWord.length).split("");
   int i = 0;
   do {
-    
+    i = i+1;
     stdout.write("guess a letter: ");
     String input = stdin.readLineSync()!;
-    if (randomWord[i] == input) {
+    for (var i = 0; i < randomWord.length; i++) {
+      if (randomWord[i] == input) {
         guess[i] = input;
-      i = i+1;
-        print('${i} letter right');
+        print('${i+1} letter right');
         if(guess.join('')==randomWord){
           print('Guess right');
         }
-      }print('wrong');
-    print(guess.join(''));
+      }
+    }
+    print(guess);
 
   }while (guess.join('') != randomWord);
 }
