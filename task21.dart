@@ -12,9 +12,9 @@ void main() {
     String? input = stdin.readLineSync();
     numberOfGuess += 1;
     if (input == 'high') {
-      x < randomNumber;
+      x = randomNumber;
     } else if (input == 'low') {
-      x > randomNumber;
+      x = randomNumber;
     }
     else if (input == 'right') {
       print('grate');
