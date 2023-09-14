@@ -10,12 +10,12 @@ void main() {
   String name = stdin.readLineSync()!;
   print('${name}  birthday is ${scientists[name]}');
     print('other scientist');
-  print('other scientist');
-  String na = stdin.readLineSync()!;
+  
+  String otherScientist = stdin.readLineSync()!;
 
 
   do{
-    if(na =='yes'){
+    if(otherScientist =='yes'){
       print('Who\'s birthday do you want to look up?');
       String name = stdin.readLineSync()!;
 
