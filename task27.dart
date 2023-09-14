@@ -25,13 +25,13 @@ void main() {
         print('rong name');
       }
       print('other scientist');
-      na = stdin.readLineSync()!;
+      otherScientist = stdin.readLineSync()!;
     }else{
       print('add  scientists');
     }
 
-  }while(na =='yes');
-  print('add  scientists');
+  }while(otherScientist =='yes');
+  
   String add = stdin.readLineSync()!;
   do{
 
@@ -45,7 +45,7 @@ void main() {
       print('add  scientists');
       add = stdin.readLineSync()!;
     }else{
-      print('ok');
+      print('end');
     }
 
   }while(add =='yes');
